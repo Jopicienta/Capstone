@@ -1,8 +1,6 @@
-Google Analytics Capstone project
+Cyclistic bike-share analysis 2019-2020
 ================
 2025-03-30
-
-# Cyclistic bike-share analysis 2019-2020
 
 ## Background
 
@@ -209,7 +207,7 @@ kable(bike_sum,  col.names = c("Year","User Type", "Day type", "Number of trips"
       caption = '<b>Table 1.</b> Summary table showing the number of rides, along with the mean and standard deviation (SD) of ride length, grouped by user type and day type.')%>% 
   column_spec(1:2, bold = T,extra_css = "border-bottom: 1px solid;")%>% 
   collapse_rows(1:2,latex_hline = "major", valign = "middle") %>% 
-   kable_styling(position = "center") %>% 
+   kable_styling(latex_options = "HOLD_position") %>% 
   row_spec(c(0), extra_css = "border-bottom: 2px solid;") %>% 
   row_spec(c(2,4,6,8), extra_css = "border-bottom: 1px solid;")
 ```
@@ -360,7 +358,7 @@ ggplot(bikes2, aes(x=usertype, fill=day_type))+
   theme_bw() + theme(plot.caption = element_text(hjust = 0.5, size = 12))
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/count-1.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/count-1.png" width="100%" style="display: block; margin: auto;" />
 
 In 2019, the total number of rides was 23,095 for casual users and
 341,782 for subscribers, with subscribers accounting for approximately
@@ -412,14 +410,14 @@ ggplot(bikes2, aes(x=usertype, y=ride_len_min, fill=day_type))+
   scale_y_continuous("Ride Time (minutes)", seq(0,1440,120))+
   annotate("rect", color = "blue4", alpha = 0, linewidth=1.5,
            xmin =-Inf, xmax = Inf, ymin = -120, ymax = 180) + 
-  annotate("text", x = 1.5, y = 270, size=4,
+  annotate("text", x = 1.5, y = 280, size=4,
            label ="Most rides were shorter than 3 hours \n(180 minutes)")+
   labs(x=" ", caption = "**Figure 2.** Violin plot showing the distribution of trip lengths by user type and day type in 2019 and 2020. The width of each violin represents the density of trips at different lengths, while black dots indicate the mean, and lines represent the standard deviation of each distribution")+ 
   theme_bw() + 
   theme(plot.caption = element_textbox_simple(padding = margin(0, 10, 0, 0),size = 12), plot.caption.position = "plot")
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/mean_time-1.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/mean_time-1.png" width="100%" style="display: block; margin: auto;" />
 
 As shown in **Figure 2**, most trips lasted less than three hours (180
 minutes). Therefore, to prevent longer trips from skewing the
@@ -572,7 +570,7 @@ ggplot(filter(bikes2,ride_len_min<180), aes(x=usertype, y=ride_len_min, fill=day
   theme(plot.caption = element_textbox_simple(padding = margin(0, 10, 0, 0),size = 12), plot.caption.position = "plot")
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/mean_time2-1.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/mean_time2-1.png" width="100%" style="display: block; margin: auto;" />
 
 Trip duration patterns remained consistent across 2019 and 2020, despite
 the difference in the number of rides between the two years. In both
@@ -703,7 +701,7 @@ chicago+
         axis.title.x = element_text(margin=margin(0, -5, 0, 20)))
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/stationplot-1.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/stationplot-1.png" width="100%" style="display: block; margin: auto;" />
 
 ``` r
 #Zoom in into the city center of Chicago
@@ -733,7 +731,7 @@ chicago2+
         axis.title.x = element_text(margin=margin(0, -5, 0, 20)))
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/stationplot-2.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/stationplot-2.png" width="100%" style="display: block; margin: auto;" />
 
 Maps from 2019 show that trips started by subscribers were more widely
 distributed across the city, whereas trips started by casual users were
@@ -898,7 +896,7 @@ ggplot(bike2019_demo, aes(x=age, y=n, fill=usertype))+
   theme_bw() + theme(plot.caption = element_textbox_simple(valign =0,  padding = margin(0, 15, 0, 0),size = 12), plot.caption.position = "plot")
 ```
 
-<img src="Cyclistic_bike-share_files/figure-gfm/demographics-1.png" style="display: block; margin: auto;" />
+<img src="Cyclistic_bike-share_files/figure-gfm/demographics-1.png" width="100%" style="display: block; margin: auto;" />
 
 The 2019 demographic data shows differences between male and female
 users. Among casual users, male trips accounted for up to twice as many
