@@ -1,20 +1,4 @@
----
-title: "Cyclistic bike-share analysis 2019-2020"
-output: 
-  github_document
-date: "2025-03-30"
-always_allow_html: true
----
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
-knitr::opts_chunk$set(fig.align = "center", dpi=600,out.width="100%",
-                      fig.height = 5.5,fig.width=10)
-
-library(knitr)
-library(kableExtra)
-library(ggmap)
-```
+# Cyclistic bike-share analysis 2019-2020
 
 ## Background
 
