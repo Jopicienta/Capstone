@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
+Capstone_code.R
+bike2020GEO.csv
+bike2020GEO.xlsx
