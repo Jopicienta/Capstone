@@ -2,8 +2,9 @@
 Cyclistic bike-share analysis 2019-2020
 ================
 2025-03-30
+<div align="justify">
 
-## Background
+  ## Background
 
 This case study corresponds to the capstone project of the Google Data
 Analytics Course.
@@ -966,3 +967,5 @@ impacts their ridership patterns, could also help boost memberships and
 casual ridership. Polls tailored to female potential clients and casual
 users could help identify ways to make memberships more attractive to
 these groups, especially by offering incentives during colder months.
+
+</div>
