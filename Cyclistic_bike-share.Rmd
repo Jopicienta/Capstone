@@ -125,7 +125,7 @@ kable(bike_sum,  col.names = c("Year","User Type", "Day type", "Number of trips"
       caption = '<b>Table 1.</b> Summary table showing the number of rides, along with the mean and standard deviation (SD) of ride length, grouped by user type and day type.')%>% 
   column_spec(1:2, bold = T,extra_css = "border-bottom: 1px solid;")%>% 
   collapse_rows(1:2,latex_hline = "major", valign = "middle") %>% 
-   kable_styling(latex_options = "HOLD_position") %>% 
+   kable_styling(position = "center") %>% 
   row_spec(c(0), extra_css = "border-bottom: 2px solid;") %>% 
   row_spec(c(2,4,6,8), extra_css = "border-bottom: 1px solid;")
 
