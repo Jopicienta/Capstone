@@ -172,7 +172,7 @@ ggplot(bikes2, aes(x=usertype, y=ride_len_min, fill=day_type))+
   scale_y_continuous("Ride Time (minutes)", seq(0,1440,120))+
   annotate("rect", color = "blue4", alpha = 0, linewidth=1.5,
            xmin =-Inf, xmax = Inf, ymin = -120, ymax = 180) + 
-  annotate("text", x = 1.5, y = 270, size=4,
+  annotate("text", x = 1.5, y = 280, size=4,
            label ="Most rides were shorter than 3 hours \n(180 minutes)")+
   labs(x=" ", caption = "**Figure 2.** Violin plot showing the distribution of trip lengths by user type and day type in 2019 and 2020. The width of each violin represents the density of trips at different lengths, while black dots indicate the mean, and lines represent the standard deviation of each distribution")+ 
   theme_bw() + 
